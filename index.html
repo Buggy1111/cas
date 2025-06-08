@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hlavní města světa – čas, obyvatelstvo a počasí</title>
+  <link rel="stylesheet" href="styl.css">
+  <link rel="icon" type="image/x-icon" href="famicoin-sun-16x16-real.ico">
+  <script src="main.js" defer></script>
+  
+</head>
+<body>
+  <h1>🏛️ Hlavní města světa – čas, datum, obyvatelstvo a počasí</h1>
+  <div class="weather-legend">
+    <div class="legend-title">🎨 Legenda barev počasí:</div>
+    <div class="legend-list">
+      <div><span class="legend-color" style="background:#ffd700"></span> Jasno/slunečno</div>
+      <div><span class="legend-color" style="background:#00d0ff"></span> Polojasno</div>
+      <div><span class="legend-color" style="background:#7ec8e3"></span> Oblačno</div>
+      <div><span class="legend-color" style="background:#8b8b8b"></span> Zataženo</div>
+      <div><span class="legend-color" style="background:#63a4ff"></span> Déšť</div>
+      <div><span class="legend-color" style="background:#4682b4"></span> Přeháňky</div>
+      <div><span class="legend-color" style="background:#9400d3"></span> Bouřka</div>
+      <div><span class="legend-color" style="background:#fffafa; border:1px solid #ccc"></span> Sníh</div>
+      <div><span class="legend-color" style="background:#c0c0c0"></span> Mlha</div>
+    </div>
+  </div>
+     <div class="cities-wrap">
+    <!-- 1: Kamenka -->
+    <div class="city-card" ...>
+      <div class="city-emoji">🏡</div>
+      <div class="city-name">Kamenka</div>
+      <div class="city-country">Česko</div>
+      <div class="city-pop">Obyvatel: cca 180</div>
+      <div class="city-weather">
+        <img src="https://openweathermap.org/img/wn/03d@2x.png" alt="oblačno">
+        <span>17°C</span>
+        <span class="weather-desc">oblačno</span>
+      </div>
+      <hr>
+      <div class="city-time" data-tz="Europe/Prague"></div>
+      <div class="city-badge">Moje město</div>
+      <a class="city-map" href="https://www.google.com/maps?q=49.73420968892261,17.796170914123223" target="_blank">Zobrazit na mapě</a>
+    </div>
+
+    <!-- 2: Tokio -->
+    <div class="city-card" style="border-color:#8b8b8b; box-shadow:0 0 16px 6px #8b8b8b80,0 2px 24px 0 #8b8b8b40,0 8px 40px 0 rgba(60,60,60,0.07)">
+      <img class="city-flag" src="https://flagcdn.com/48x36/jp.png" alt="JP">
+      <div class="city-name">Tokio</div>
+      <div class="city-country">Japonsko</div>
+      <div class="city-pop">Obyvatel: 37,1 mil.</div>
+      <div class="city-weather">
+        <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="zataženo">
+        <span>25°C</span>
+        <span class="weather-desc">zataženo</span>
+      </div>
+      <hr>
+      <div class="city-time" data-tz="Asia/Tokyo"></div>
+      <div class="city-badge">Top svět</div>
+      <a class="city-map" href="https://www.google.com/maps?q=35.6895,139.6917" target="_blank">Zobrazit na mapě</a>
+    </div>
+    <!-- 3: Dillí -->
+    <div class="city-card" style="border-color:#ffd700; box-shadow:0 0 16px 6px #ffd70080,0 2px 24px 0 #ffd70040,0 8px 40px 0 rgba(60,60,60,0.07)">
+      <img class="city-flag" src="https://flagcdn.com/48x36/in.png" alt="IN">
+      <div class="city-name">Dillí</div>
+      <div class="city-country">Indie</div>
+      <div class="city-pop">Obyvatel: 32,2 mil.</div>
+      <div class="city-weather">
+        <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="slunečno">
+        <span>32°C</span>
+        <span class="weather-desc">slunečno</span>
+      </div>
+      <hr>
+      <div class="city-time" data-tz="Asia/Kolkata"></div>
+      <div class="city-badge">Top svět</div>
+      <a class="city-map" href="https://www.google.com/maps?q=28.652,77.2315" target="_blank">Zobrazit na mapě</a>
+    </div>
+    <!-- 4: Šanghaj -->
+    <div class="city-card" style="border-color:#00d0ff; box-shadow:0 0 16px 6px #00d0ff80,0 2px 24px 0 #00d0ff40,0 8px 40px 0 rgba(60,60,60,0.07)">
+      <img class="city-flag" src="https://flagcdn.com/48x36/cn.png" alt="CN">
+      <div class="city-name">Šanghaj</div>
+      <div class="city-country">Čína</div>
+      <div class="city-pop">Obyvatel: 28,5 mil.</div>
+      <div class="city-weather">
+        <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="částečně oblačno">
+        <span>28°C</span>
+        <span class="weather-desc">částečně oblačno</span>
+      </div>
+      <hr>
+      <div class="city-time" data-tz="Asia/Shanghai"></div>
+      <div class="city-badge">Top svět</div>
+      <a class="city-map" href="https://www.google.com/maps?q=31.2222,121.4581" target="_blank">Zobrazit na mapě</a>
+    </div>
+    <!-- 5: São Paulo -->
+    <div class="city-card" style="border-color:#63a4ff; box-shadow:0 0 16px 6px #63a4ff80,0 2px 24px 0 #63a4ff40,0 8px 40px 0 rgba(60,60,60,0.07)">
+      <img class="city-flag" src="https://flagcdn.com/48x36/br.png" alt="BR">
+      <div class="city-name">São Paulo</div>
+      <div class="city-country">Brazílie</div>
+      <div class="city-pop">Obyvatel: 22,6 mil.</div>
+      <div class="city-weather">
+        <img src="https://openweathermap.org/img/wn/09d@2x.png" alt="déšť">
+        <span>22°C</span>
+        <span class="weather-desc">déšť</span>
+      </div>
+      <hr>
+      <div class="city-time" data-tz="America/Sao_Paulo"></div>
+      <div class="city-badge">Top svět</div>
+      <a class="city-map" href="https://www.google.com/maps?q=-23.533773,-46.62529" target="_blank">Zobrazit na mapě</a>
+    </div>
+    <!-- 6: Mexico City -->
+    <div class="city-card" style="border-color:#8b8b8b; box-shadow:0 0 16px 6px #8b8b8b80,0 2px 24px 0 #8b8b8b40,0 8px 40px 0 rgba(60,60,60,0.07)">
+      <img class="city-flag" src="https://flagcdn.com/48x36/mx.png" alt="MX">
+      <div class="city-name">Mexico City</div>
+      <div class="city-country">Mexiko</div>
+      <div class="city-pop">Obyvatel: 22,1 mil.</div>
+      <div class="city-weather">
+        <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="zataženo">
+        <span>20°C</span>
+        <span class="weather-desc">zataženo</span>
+      </div>
+      <hr>
+      <div class="city-time" data-tz="America/Mexico_City"></div>
+      <div class="city-badge">Top svět</div>
+      <a class="city-map" href="https://www.google.com/maps?q=19.432608,-99.133209" target="_blank">Zobrazit na mapě</a>
+    </div>
+    <!-- 7: Káhira -->
+    <div class="city-card" style="border-color:#ffd700; box-shadow:0 0 16px 6px #ffd70080,0 2px 24px 0 #ffd70040,0 8px 40px 0 rgba(60,60,60,0.07)">
+      <img class="city-flag" src="https://flagcdn.com/48x36/eg.png" alt="EG">
+      <div class="city-name">Káhira</div>
+      <div class="city-country">Egypt</div>
+      <div class="city-pop">Obyvatel: 21,7 mil.</div>
+      <div class="city-weather">
+        <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="jasno">
+        <span>29°C</span>
+        <span class="weather-desc">jasno</span>
+      </div>
+      <hr>
+      <div class="city-time" data-tz="Africa/Cairo"></div>
+      <div class="city-badge">Top svět</div>
+      <a class="city-map" href="https://www.google.com/maps?q=30.057997,31.228886" target="_blank">Zobrazit na mapě</a>
+    </div>
+    <!-- 8: Moskva -->
+    <div class="city-card" style="border-color:#7ec8e3; box-shadow:0 0 16px 6px #7ec8e380,0 2px 24px 0 #7ec8e340,0 8px 40px 0 rgba(60,60,60,0.07)">
+      <img class="city-flag" src="https://flagcdn.com/48x36/ru.png" alt="RU">
+      <div class="city-name">Moskva</div>
+      <div class="city-country">Rusko</div>
+      <div class="city-pop">Obyvatel: 13,2 mil.</div>
+      <div class="city-weather">
+        <img src="https://openweathermap.org/img/wn/03d@2x.png" alt="oblačno">
+        <span>16°C</span>
+        <span class="weather-desc">oblačno</span>
+      </div>
+      <hr>
+      <div class="city-time" data-tz="Europe/Moscow"></div>
+      <div class="city-badge">Top svět</div>
+      <a class="city-map" href="https://www.google.com/maps?q=55.751667,37.617778" target="_blank">Zobrazit na mapě</a>
+    </div>
+    <!-- 9: New York -->
+    <div class="city-card" style="border-color:#8b8b8b; box-shadow:0 0 16px 6px #8b8b8b80,0 2px 24px 0 #8b8b8b40,0 8px 40px 0 rgba(60,60,60,0.07)">
+      <img class="city-flag" src="https://flagcdn.com/48x36/us.png" alt="US">
+      <div class="city-name">New York</div>
+      <div class="city-country">USA</div>
+      <div class="city-pop">Obyvatel: 18,9 mil.</div>
+      <div class="city-weather">
+        <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="oblačno">
+        <span>18°C</span>
+        <span class="weather-desc">oblačno</span>
+      </div>
+      <hr>
+      <div class="city-time" data-tz="America/New_York"></div>
+      <div class="city-badge">Top svět</div>
+      <a class="city-map" href="https://www.google.com/maps?q=40.7128,-74.006" target="_blank">Zobrazit na mapě</a>
+    </div>
+    <!-- 10: Dháka -->
+    <div class="city-card" style="border-color:#00d0ff; box-shadow:0 0 16px 6px #00d0ff80,0 2px 24px 0 #00d0ff40,0 8px 40px 0 rgba(60,60,60,0.07)">
+      <img class="city-flag" src="https://flagcdn.com/48x36/bd.png" alt="BD">
+      <div class="city-name">Dháka</div>
+      <div class="city-country">Bangladéš</div>
+      <div class="city-pop">Obyvatel: 22,2 mil.</div>
+      <div class="city-weather">
+        <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="vlhko">
+        <span>30°C</span>
+        <span class="weather-desc">vlhko</span>
+      </div>
+      <hr>
+      <div class="city-time" data-tz="Asia/Dhaka"></div>
+      <div class="city-badge">Top svět</div>
+      <a class="city-map" href="https://www.google.com/maps?q=23.7289,90.3944" target="_blank">Zobrazit na mapě</a>
+    </div>
+    <!-- 11: Bombaj -->
+    <div class="city-card" style="border-color:#ffd700; box-shadow:0 0 16px 6px #ffd70080,0 2px 24px 0 #ffd70040,0 8px 40px 0 rgba(60,60,60,0.07)">
+      <img class="city-flag" src="https://flagcdn.com/48x36/in.png" alt="IN">
+      <div class="city-name">Bombaj</div>
+      <div class="city-country">Indie</div>
+      <div class="city-pop">Obyvatel: 21,7 mil.</div>
+      <div class="city-weather">
+        <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="horko">
+        <span>31°C</span>
+        <span class="weather-desc">horko</span>
+      </div>
+      <hr>
+      <div class="city-time" data-tz="Asia/Kolkata"></div>
+      <div class="city-badge">Top svět</div>
+      <a class="city-map" href="https://www.google.com/maps?q=19.0728,72.8826" target="_blank">Zobrazit na mapě</a>
+    </div>
+  </div>
+</body>
+</html>
