@@ -72,7 +72,7 @@ function getWeatherIconClass(desc) {
 // 5. API klíč
 const apiKey = "4078c40502499b6489b8982b0930b28c";
 
-// 6. FUNKCE NAČTE A VLOŽÍ POČASÍ + UPRAVÍ STYL RÁMEČKU, ANIMACE A OVERLAYE
+// 6. HLAVNÍ FUNKCE – počasí, animace, overlay, pocitově, vlhkost, vítr (km/h)
 function updateAllWeather() {
   cities.forEach((city, i) => {
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${city.lat}&lon=${city.lon}&appid=${apiKey}&units=metric&lang=cz`)
@@ -85,25 +85,27 @@ function updateAllWeather() {
         const icon = data.weather[0].icon;
         const desc = data.weather[0].description;
         const temp = Math.round(data.main.temp);
+        const feelsLike = Math.round(data.main.feels_like);
+        const humidity = data.main.humidity;
+        const wind = data.wind.speed;
+        const windKmh = Math.round(wind * 3.6); // převod m/s na km/h
 
         // Barva rámečku a glow animace
         const color = getWeatherColor(desc);
-        card.style.setProperty('--weather-color', color + '80'); // pro glow animaci
+        card.style.setProperty('--weather-color', color + '80');
         card.style.borderColor = color;
         card.style.boxShadow = `0 0 16px 6px ${color}80,0 2px 24px 0 ${color}40,0 8px 40px 0 rgba(60,60,60,0.07)`;
-        card.classList.add('animated'); // pro CSS animaci rámečku
+        card.classList.add('animated');
 
         // Overlay pro mlhu a opar
         const foggy = desc.toLowerCase().includes("mlha");
         const misty = desc.toLowerCase().includes("opar") || desc.toLowerCase().includes("mist") || desc.toLowerCase().includes("haze");
-
-        // Nejprve smaž staré overlaye
+        // Smazat staré overlaye
         const fogOverlay = card.querySelector('.fog-overlay');
         if (fogOverlay) fogOverlay.remove();
         const mistOverlay = card.querySelector('.mist-overlay');
         if (mistOverlay) mistOverlay.remove();
-
-        // Vlož overlay podle typu počasí
+        // Přidat overlay dle počasí
         if (foggy) {
           const overlay = document.createElement('div');
           overlay.className = 'fog-overlay';
@@ -114,14 +116,21 @@ function updateAllWeather() {
           card.appendChild(overlay);
         }
 
-        // Vlož aktuální počasí s animovanou třídou podle typu
+        // Výpis dat ve dvou řádcích (přehledně, wrap!)
         const weatherDiv = card.querySelector('.city-weather');
         if (weatherDiv) {
           const iconClass = getWeatherIconClass(desc);
           weatherDiv.innerHTML = `
-            <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${desc}" class="weather-icon ${iconClass}">
-            <span>${temp}°C</span>
-            <span class="weather-desc">${desc.charAt(0).toUpperCase() + desc.slice(1)}</span>
+            <div class="weather-main">
+              <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${desc}" class="weather-icon ${iconClass}">
+              <span>${temp}°C</span>
+              <span class="weather-desc">${desc.charAt(0).toUpperCase() + desc.slice(1)}</span>
+            </div>
+            <div class="weather-badges">
+              <span class="feelslike-badge" title="Pocitová teplota: takto to skutečně působí na člověka!">Pocitově: ${feelsLike}°C</span>
+              <span class="humidity-badge" title="Relativní vlhkost vzduchu">Vlhkost: ${humidity}%</span>
+              <span class="wind-badge" title="Rychlost větru v kilometrech za hodinu">Vítr: ${windKmh} km/h</span>
+            </div>
           `;
         }
       })

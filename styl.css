@@ -108,13 +108,16 @@ h1 {
   letter-spacing: 0.5px;
 }
 .city-weather {
-  margin-bottom: 7px;
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 0.7em;
   align-items: center;
-  justify-content: center;
-  gap: 6px;
-  font-size: 16px;
+  justify-content: flex-start;
+  margin-bottom: 7px;
+  min-height: 50px;
+  /* přidej případně padding nebo výšku podle designu */
 }
+
 .city-weather img {
   width: 30px;
   height: 30px;
@@ -563,4 +566,57 @@ h1 {
     padding-left: 2vw;
     padding-right: 2vw;
   }
+}
+
+.feelslike-badge {
+  display: inline-block;
+  margin-left: 9px;
+  color: #ff9800;
+  font-size: 0.95em;
+  font-weight: 500;
+  background: #fff6e7d0;
+  padding: 1.5px 8px;
+  border-radius: 11px;
+  vertical-align: middle;
+  transition: background 0.3s;
+}
+.feelslike-badge:hover {
+  background: #ffebc4;
+  color: #d47c00;
+}
+
+.feelslike-badge {
+  display: inline-block;
+  margin-left: 9px;
+  color: #ff9800;
+  font-size: 0.95em;
+  font-weight: 500;
+  background: #fff6e7d0;
+  padding: 1.5px 8px;
+  border-radius: 11px;
+  vertical-align: middle;
+  transition: background 0.3s;
+}
+.feelslike-badge:hover {
+  background: #ffebc4;
+  color: #d47c00;
+}
+.humidity-badge, .wind-badge {
+  display: inline-block;
+  margin-left: 9px;
+  color: #2196f3;
+  font-size: 0.92em;
+  font-weight: 500;
+  background: #eef6fded;
+  padding: 1.5px 8px 1.5px 5px;
+  border-radius: 11px;
+  vertical-align: middle;
+  transition: background 0.3s;
+}
+.humidity-badge svg, .wind-badge svg {
+  vertical-align: middle;
+}
+.humidity-badge:hover, .wind-badge:hover {
+  background: #dbeefd;
+  color: #166fbb;
 }
