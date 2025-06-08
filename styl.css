@@ -181,3 +181,129 @@ hr {
   display: block;
   filter: drop-shadow(0 2px 2px #42e69599);
 }
+
+.footer-famicoin {
+  margin-top: 40px;
+  padding: 30px 0 22px 0;
+  background: linear-gradient(120deg, #41e6c7 50%, #185a9d 100%);
+  box-shadow: 0 -2px 18px #0002;
+  color: #fff;
+  font-size: 16px;
+}
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.footer-logo {
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 7px;
+}
+.footer-logo img {
+  vertical-align: middle;
+  margin-right: 8px;
+  box-shadow: 0 2px 9px #fff8, 0 0 0 1.5px #fff;
+  border-radius: 50%;
+}
+.footer-title {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 1.08em;
+  color: #ffd700;
+  text-shadow: 0 2px 12px #185a9d66;
+  vertical-align: middle;
+}
+.footer-links {
+  margin: 8px 0 4px 0;
+  font-size: 15px;
+}
+.footer-links a {
+  color: #fffbe8;
+  text-decoration: underline;
+  margin: 0 5px;
+  transition: color .2s;
+  font-weight: 500;
+}
+.footer-links a:hover {
+  color: #ffd700;
+}
+.footer-links span {
+  color: #fff8;
+  margin: 0 6px;
+}
+.footer-copy {
+  font-size: 14px;
+  color: #e6f7f4;
+  margin-top: 4px;
+}
+@media (max-width: 600px) {
+  .footer-content { padding: 0 8vw; }
+  .footer-famicoin { font-size: 14px; }
+  .footer-logo { font-size: 1rem; }
+}
+
+.footer-famicoin {
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-famicoin::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 58%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.06) 100%);
+  pointer-events: none;
+  z-index: 1;
+  border-bottom-left-radius: 60px 30px;
+  border-bottom-right-radius: 60px 30px;
+  filter: blur(1.2px);
+}
+.footer-content {
+  position: relative;
+  z-index: 2; /* obsah bude vždy nad leskem */
+}
+
+.footer-shine-line {
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%;
+  height: 5px;
+  z-index: 3;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  box-shadow: 0 0 9px 2.5px #fff8, 0 2px 15px #ffd70033;
+  opacity: 0.96;
+
+  background: linear-gradient(90deg, 
+    #ffd700 0%,     /* Jasno */
+    #a5cdfa 12%,    /* Polojasno */
+    #7ec8e3 22%,    /* Oblačno */
+    #8b8b8b 33%,    /* Zataženo */
+    #63a4ff 44%,    /* Déšť */
+    #4682b4 56%,    /* Přeháňky */
+    #9400d3 68%,    /* Bouřka */
+    #fffafa 81%,    /* Sníh */
+    #c0c0c0 90%,    /* Mlha */
+    #ffd700 100%    /* Navazuje zpět na Jasno */
+  );
+  background-size: 300% 100%;
+  animation: shine-bar-move 14s linear infinite;
+}
+
+@keyframes shine-bar-move {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.footer-name {
+  color: #111;              /* Černá */
+  font-size: 22px;          /* Velké písmo pro viditelnost */
+  font-weight: bold;        /* Tučné */
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  text-shadow: 0 1px 9px #fff9, 0 0 3px #ffd70022;
+}
