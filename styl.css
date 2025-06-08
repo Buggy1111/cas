@@ -490,3 +490,77 @@ hr {
 }
 
 .city-card { position: relative; overflow: hidden; }
+
+.weather-realnote {
+  font-size: 1.08em;
+  color: #2983cf;
+  margin-bottom: 1em;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 6px #ffffff60;
+}
+.weather-highlight {
+  color: #00aaff;
+  font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 0.2em;
+}
+
+.weather-realnote {
+  text-align: center;
+  margin: 0 auto 2em auto;
+  max-width: 750px;
+  font-size: 1.13em;
+}
+
+.weather-legend {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+  max-width: 440px;
+  border-radius: 22px;
+  box-shadow: 0 6px 30px #0b295b0d, 0 1.5px 8px #2187b211;
+  padding: 18px 26px 12px 26px;
+  background: #f4fcffeb;
+}
+.legend-title {
+  font-weight: bold;
+  color: #2196f3;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+.legend-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 20px;
+}
+.legend-list > div {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  min-width: 120px;
+}
+.legend-color {
+  display: inline-block;
+  width: 22px;
+  height: 18px;
+  border-radius: 7px;
+  border: 1.5px solid #e7e8ed;
+  margin-right: 9px;
+}
+
+@media (max-width: 600px) {
+  .weather-legend {
+    max-width: 98vw;
+    padding: 10px 4vw 8px 4vw;
+  }
+  .weather-realnote {
+    font-size: 1em;
+    max-width: 96vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+}

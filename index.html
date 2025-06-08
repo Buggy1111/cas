@@ -3,31 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hlavní města světa – čas, obyvatelstvo a počasí</title>
+  <title>Hlavní města světa – čas, obyvatelstvo a reálné počasí</title>
   <link rel="stylesheet" href="styl.css">
   <link rel="icon" type="image/x-icon" href="famicoin-sun-16x16-real.ico">
   <script src="main.js" defer></script>
-  
 </head>
 <body>
-  <h1>🏛️ Hlavní města světa – čas, datum, obyvatelstvo a počasí</h1>
-  <div class="weather-legend">
-    <div class="legend-title">🎨 Legenda barev počasí:</div>
-    <div class="legend-list">
-      <div><span class="legend-color" style="background:#ffd700"></span> Jasno/slunečno</div>
-      <div><span class="legend-color" style="background:#00d0ff"></span> Polojasno</div>
-      <div><span class="legend-color" style="background:#7ec8e3"></span> Oblačno</div>
-      <div><span class="legend-color" style="background:#8b8b8b"></span> Zataženo</div>
-      <div><span class="legend-color" style="background:#63a4ff"></span> Déšť</div>
-      <div><span class="legend-color" style="background:#4682b4"></span> Přeháňky</div>
-      <div><span class="legend-color" style="background:#9400d3"></span> Bouřka</div>
-      <div><span class="legend-color" style="background:#fffafa; border:1px solid #ccc"></span> Sníh</div>
-      <div><span class="legend-color" style="background:#c0c0c0"></span> Mlha</div>
-    </div>
+  <h1>
+    🏛️ Hlavní města světa – čas, datum, obyvatelstvo a 
+    <span class="weather-highlight">reálné počasí</span>
+  </h1>
+
+  <div class="weather-realnote">
+    🌦️ Veškeré počasí je <b>aktuální a načítáno online z OpenWeatherMap</b>.
+    <br>
+    <span style="font-size:0.98em;color:#555;">(Aktualizuje se každou hodinu automaticky – stav odpovídá skutečné situaci v daném městě.)</span>
   </div>
-     <div class="cities-wrap">
+  
+  <div class="cities-wrap">
     <!-- 1: Kamenka -->
-    <div class="city-card" ...>
+    <div class="city-card">
       <div class="city-emoji">🏡</div>
       <div class="city-name">Kamenka</div>
       <div class="city-country">Česko</div>
@@ -44,7 +39,7 @@
     </div>
 
     <!-- 2: Tokio -->
-    <div class="city-card" style="border-color:#8b8b8b; box-shadow:0 0 16px 6px #8b8b8b80,0 2px 24px 0 #8b8b8b40,0 8px 40px 0 rgba(60,60,60,0.07)">
+    <div class="city-card">
       <img class="city-flag" src="https://flagcdn.com/48x36/jp.png" alt="JP">
       <div class="city-name">Tokio</div>
       <div class="city-country">Japonsko</div>
@@ -60,7 +55,7 @@
       <a class="city-map" href="https://www.google.com/maps?q=35.6895,139.6917" target="_blank">Zobrazit na mapě</a>
     </div>
     <!-- 3: Dillí -->
-    <div class="city-card" style="border-color:#ffd700; box-shadow:0 0 16px 6px #ffd70080,0 2px 24px 0 #ffd70040,0 8px 40px 0 rgba(60,60,60,0.07)">
+    <div class="city-card">
       <img class="city-flag" src="https://flagcdn.com/48x36/in.png" alt="IN">
       <div class="city-name">Dillí</div>
       <div class="city-country">Indie</div>
@@ -76,7 +71,7 @@
       <a class="city-map" href="https://www.google.com/maps?q=28.652,77.2315" target="_blank">Zobrazit na mapě</a>
     </div>
     <!-- 4: Šanghaj -->
-    <div class="city-card" style="border-color:#00d0ff; box-shadow:0 0 16px 6px #00d0ff80,0 2px 24px 0 #00d0ff40,0 8px 40px 0 rgba(60,60,60,0.07)">
+    <div class="city-card">
       <img class="city-flag" src="https://flagcdn.com/48x36/cn.png" alt="CN">
       <div class="city-name">Šanghaj</div>
       <div class="city-country">Čína</div>
@@ -92,7 +87,7 @@
       <a class="city-map" href="https://www.google.com/maps?q=31.2222,121.4581" target="_blank">Zobrazit na mapě</a>
     </div>
     <!-- 5: São Paulo -->
-    <div class="city-card" style="border-color:#63a4ff; box-shadow:0 0 16px 6px #63a4ff80,0 2px 24px 0 #63a4ff40,0 8px 40px 0 rgba(60,60,60,0.07)">
+    <div class="city-card">
       <img class="city-flag" src="https://flagcdn.com/48x36/br.png" alt="BR">
       <div class="city-name">São Paulo</div>
       <div class="city-country">Brazílie</div>
@@ -108,7 +103,7 @@
       <a class="city-map" href="https://www.google.com/maps?q=-23.533773,-46.62529" target="_blank">Zobrazit na mapě</a>
     </div>
     <!-- 6: Mexico City -->
-    <div class="city-card" style="border-color:#8b8b8b; box-shadow:0 0 16px 6px #8b8b8b80,0 2px 24px 0 #8b8b8b40,0 8px 40px 0 rgba(60,60,60,0.07)">
+    <div class="city-card">
       <img class="city-flag" src="https://flagcdn.com/48x36/mx.png" alt="MX">
       <div class="city-name">Mexico City</div>
       <div class="city-country">Mexiko</div>
@@ -124,7 +119,7 @@
       <a class="city-map" href="https://www.google.com/maps?q=19.432608,-99.133209" target="_blank">Zobrazit na mapě</a>
     </div>
     <!-- 7: Káhira -->
-    <div class="city-card" style="border-color:#ffd700; box-shadow:0 0 16px 6px #ffd70080,0 2px 24px 0 #ffd70040,0 8px 40px 0 rgba(60,60,60,0.07)">
+    <div class="city-card">
       <img class="city-flag" src="https://flagcdn.com/48x36/eg.png" alt="EG">
       <div class="city-name">Káhira</div>
       <div class="city-country">Egypt</div>
@@ -140,7 +135,7 @@
       <a class="city-map" href="https://www.google.com/maps?q=30.057997,31.228886" target="_blank">Zobrazit na mapě</a>
     </div>
     <!-- 8: Moskva -->
-    <div class="city-card" style="border-color:#7ec8e3; box-shadow:0 0 16px 6px #7ec8e380,0 2px 24px 0 #7ec8e340,0 8px 40px 0 rgba(60,60,60,0.07)">
+    <div class="city-card">
       <img class="city-flag" src="https://flagcdn.com/48x36/ru.png" alt="RU">
       <div class="city-name">Moskva</div>
       <div class="city-country">Rusko</div>
@@ -156,7 +151,7 @@
       <a class="city-map" href="https://www.google.com/maps?q=55.751667,37.617778" target="_blank">Zobrazit na mapě</a>
     </div>
     <!-- 9: New York -->
-    <div class="city-card" style="border-color:#8b8b8b; box-shadow:0 0 16px 6px #8b8b8b80,0 2px 24px 0 #8b8b8b40,0 8px 40px 0 rgba(60,60,60,0.07)">
+    <div class="city-card">
       <img class="city-flag" src="https://flagcdn.com/48x36/us.png" alt="US">
       <div class="city-name">New York</div>
       <div class="city-country">USA</div>
@@ -172,7 +167,7 @@
       <a class="city-map" href="https://www.google.com/maps?q=40.7128,-74.006" target="_blank">Zobrazit na mapě</a>
     </div>
     <!-- 10: Dháka -->
-    <div class="city-card" style="border-color:#00d0ff; box-shadow:0 0 16px 6px #00d0ff80,0 2px 24px 0 #00d0ff40,0 8px 40px 0 rgba(60,60,60,0.07)">
+    <div class="city-card">
       <img class="city-flag" src="https://flagcdn.com/48x36/bd.png" alt="BD">
       <div class="city-name">Dháka</div>
       <div class="city-country">Bangladéš</div>
@@ -188,7 +183,7 @@
       <a class="city-map" href="https://www.google.com/maps?q=23.7289,90.3944" target="_blank">Zobrazit na mapě</a>
     </div>
     <!-- 11: Bombaj -->
-    <div class="city-card" style="border-color:#ffd700; box-shadow:0 0 16px 6px #ffd70080,0 2px 24px 0 #ffd70040,0 8px 40px 0 rgba(60,60,60,0.07)">
+    <div class="city-card">
       <img class="city-flag" src="https://flagcdn.com/48x36/in.png" alt="IN">
       <div class="city-name">Bombaj</div>
       <div class="city-country">Indie</div>
@@ -204,14 +199,32 @@
       <a class="city-map" href="https://www.google.com/maps?q=19.0728,72.8826" target="_blank">Zobrazit na mapě</a>
     </div>
   </div>
-  <footer class="footer-famicoin">
-  <div class="footer-shine-line"></div>
-  <div class="footer-content">
-    <div class="footer-copy">
-      &copy; 2025 Michal Bürgermeister
+
+  <div class="weather-legend">
+    <div class="legend-title">🎨 Legenda barev počasí:</div>
+    <div class="legend-list">
+      <div><span class="legend-color" style="background:#ffd700"></span> Jasno/slunečno</div>
+      <div><span class="legend-color" style="background:#00d0ff"></span> Polojasno</div>
+      <div><span class="legend-color" style="background:#7ec8e3"></span> Oblačno</div>
+      <div><span class="legend-color" style="background:#8b8b8b"></span> Zataženo</div>
+      <div><span class="legend-color" style="background:#63a4ff"></span> Déšť</div>
+      <div><span class="legend-color" style="background:#4682b4"></span> Přeháňky</div>
+      <div><span class="legend-color" style="background:#9400d3"></span> Bouřka</div>
+      <div><span class="legend-color" style="background:#fffafa; border:1px solid #ccc"></span> Sníh</div>
+      <div><span class="legend-color" style="background:#c0c0c0"></span> Mlha / opar</div>
     </div>
   </div>
-</footer>
+
+  <footer class="footer-famicoin">
+    <div class="footer-shine-line"></div>
+    <div class="footer-content">
+      <div class="footer-copy">
+        &copy; 2025 Michal Bürgermeister
+        <span style="color:#0094d7; font-weight:500; margin-left:10px;">
+          | Data o počasí: <a href="https://openweathermap.org/" target="_blank" style="color:#00aaff;">OpenWeatherMap</a> – reálné hodnoty online
+        </span>
+      </div>
+    </div>
+  </footer>
 </body>
-</html>
 </html>
